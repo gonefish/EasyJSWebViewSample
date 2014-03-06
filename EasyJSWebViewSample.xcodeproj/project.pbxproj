@@ -23,6 +23,7 @@
 		B56DD61B16AAE6D700AD40F3 /* EasyJSWebViewProxyDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B56DD61816AAE6D700AD40F3 /* EasyJSWebViewProxyDelegate.m */; };
 		B56DD61D16AAE73500AD40F3 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = B56DD61C16AAE73500AD40F3 /* test.html */; };
 		B56DD62016AAE7A300AD40F3 /* MyJSInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = B56DD61F16AAE7A200AD40F3 /* MyJSInterface.m */; };
+		E3EC902518C81AED00427C84 /* test2.html in Resources */ = {isa = PBXBuildFile; fileRef = E3EC902418C81AED00427C84 /* test2.html */; };
 		FAFC6E1816AD815200DFE50D /* EasyJSDataFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFC6E1716AD815200DFE50D /* EasyJSDataFunction.m */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		B56DD61C16AAE73500AD40F3 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		B56DD61E16AAE7A200AD40F3 /* MyJSInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyJSInterface.h; sourceTree = "<group>"; };
 		B56DD61F16AAE7A200AD40F3 /* MyJSInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyJSInterface.m; sourceTree = "<group>"; };
+		E3EC902418C81AED00427C84 /* test2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test2.html; sourceTree = "<group>"; };
 		FAFC6E1616AD815200DFE50D /* EasyJSDataFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyJSDataFunction.h; sourceTree = "<group>"; };
 		FAFC6E1716AD815200DFE50D /* EasyJSDataFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyJSDataFunction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				B56DD61C16AAE73500AD40F3 /* test.html */,
+				E3EC902418C81AED00427C84 /* test2.html */,
 				B56DD5F516AAE68C00AD40F3 /* EasyJSWebViewSample-Info.plist */,
 				B56DD5F616AAE68C00AD40F3 /* InfoPlist.strings */,
 				B56DD5F916AAE68C00AD40F3 /* main.m */,
@@ -197,6 +200,7 @@
 				B56DD60216AAE68C00AD40F3 /* Default@2x.png in Resources */,
 				B56DD60416AAE68C00AD40F3 /* Default-568h@2x.png in Resources */,
 				B56DD60A16AAE68C00AD40F3 /* ViewController_iPhone.xib in Resources */,
+				E3EC902518C81AED00427C84 /* test2.html in Resources */,
 				B56DD61D16AAE73500AD40F3 /* test.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +300,7 @@
 		B56DD61116AAE68C00AD40F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasyJSWebViewSample/EasyJSWebViewSample-Prefix.pch";
 				INFOPLIST_FILE = "EasyJSWebViewSample/EasyJSWebViewSample-Info.plist";
@@ -309,7 +313,7 @@
 		B56DD61216AAE68C00AD40F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EasyJSWebViewSample/EasyJSWebViewSample-Prefix.pch";
 				INFOPLIST_FILE = "EasyJSWebViewSample/EasyJSWebViewSample-Info.plist";

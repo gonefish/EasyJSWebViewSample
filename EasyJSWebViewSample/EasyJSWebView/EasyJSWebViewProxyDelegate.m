@@ -154,7 +154,6 @@ return EasyJS.call(obj, method, Array.prototype.slice.call(arguments));\
         //inject the function interface
         [webView stringByEvaluatingJavaScriptFromString:injection];
         
-        [injection release];
         
         [webView stringByEvaluatingJavaScriptFromString:DISPATCH_JS];
     }
@@ -187,6 +186,8 @@ return EasyJS.call(obj, method, Array.prototype.slice.call(arguments));\
 		invoker.target = interface;
 		
 		NSMutableArray* args = [[NSMutableArray alloc] init];
+        
+        NSMutableArray *retainArgument = [NSMutableArray array];
 		
 		if ([components count] > 3){
 			NSString *argsAsString = [(NSString*)[components objectAtIndex:3]
@@ -201,10 +202,12 @@ return EasyJS.call(obj, method, Array.prototype.slice.call(arguments));\
 					EasyJSDataFunction* func = [[EasyJSDataFunction alloc] initWithWebView:(EasyJSWebView *)webView];
 					func.funcID = argStr;
 					[args addObject:func];
+                    [retainArgument addObject:func];
 					[invoker setArgument:&func atIndex:(j + 2)];
 				}else if ([@"s" isEqualToString:type]){
 					NSString* arg = [argStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 					[args addObject:arg];
+                    [retainArgument addObject:arg];
 					[invoker setArgument:&arg atIndex:(j + 2)];
 				}
 			}
@@ -224,7 +227,6 @@ return EasyJS.call(obj, method, Array.prototype.slice.call(arguments));\
 			}
 		}
 		
-		[args release];
 		
 		return NO;
 	}
@@ -242,18 +244,5 @@ return EasyJS.call(obj, method, Array.prototype.slice.call(arguments));\
     self.numRequestsLoading++;
 }
 
-- (void)dealloc{
-	if (self.javascriptInterfaces){
-		[self.javascriptInterfaces release];
-		self.javascriptInterfaces = nil;
-	}
-	
-	if (self.realDelegate){
-		[self.realDelegate release];
-		self.realDelegate = nil;
-	}
-	
-	[super dealloc];
-}
 
 @end

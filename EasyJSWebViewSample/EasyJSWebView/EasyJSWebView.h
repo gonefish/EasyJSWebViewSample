@@ -11,10 +11,8 @@
 
 @interface EasyJSWebView : UIWebView
 
-// All the events will pass through this proxy delegate first
-@property (nonatomic, retain) EasyJSWebViewProxyDelegate* proxyDelegate;
-
 - (void) initEasyJS;
+
 - (void) addJavascriptInterfaces:(NSObject*) interface WithName:(NSString*) name;
 
 @end

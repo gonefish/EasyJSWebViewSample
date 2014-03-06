@@ -11,8 +11,8 @@
 
 @interface EasyJSDataFunction : NSObject
 
-@property (nonatomic, retain) NSString* funcID;
-@property (nonatomic, retain) EasyJSWebView* webView;
+@property (nonatomic, strong) NSString* funcID;
+@property (nonatomic, strong) EasyJSWebView* webView;
 @property (nonatomic, assign) BOOL removeAfterExecute;
 
 - (id) initWithWebView: (EasyJSWebView*) _webView;

@@ -22,7 +22,6 @@
 	
 	MyJSInterface* interface = [MyJSInterface new];
 	[self.myWebView addJavascriptInterfaces:interface WithName:@"MyJSTest"];
-	[interface release];
 	
 	[self.myWebView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] 																		 pathForResource:@"test" ofType:@"html"]isDirectory:NO]]];
 	

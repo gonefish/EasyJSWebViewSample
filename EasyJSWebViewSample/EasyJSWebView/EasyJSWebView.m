@@ -8,6 +8,12 @@
 
 #import "EasyJSWebView.h"
 
+@interface EasyJSWebView ()
+
+@property (nonatomic, strong) EasyJSWebViewProxyDelegate* proxyDelegate;
+
+@end
+
 @implementation EasyJSWebView
 
 @synthesize proxyDelegate;
@@ -54,9 +60,6 @@
 }
 
 - (void) dealloc{
-	[super dealloc];
-	
-	[self.proxyDelegate release];
 	self.proxyDelegate = nil;
 }
 
