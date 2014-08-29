@@ -105,6 +105,8 @@ return EasyJS.call(obj, method, Array.prototype.slice.call(arguments));\
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
 	[self.realDelegate webView:webView didFailLoadWithError:error];
+    
+    self.numRequestsLoading--;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
